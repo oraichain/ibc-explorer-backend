@@ -1,6 +1,5 @@
 # iobscan-ibc-explorer-backend
 
-
 ## Run
 
 First make
@@ -36,4 +35,10 @@ docker run --name iobscan-ibc-explorer-backend -p 8080:8080 iobscan-ibc-explorer
 ```
 
 ## env params
+
 - CONFIG_FILE_PATH: `option` `string` config file path
+
+## development
+
+- CGO_CFLAGS=-Wno-deprecated-declarations CONFIG_FILE_PATH=configs/cfg.toml go run main.go start
+- CGO_CFLAGS=-Wno-deprecated-declarations air -c air.toml to enable live reload (`go install github.com/cosmtrek/air@latest`)
